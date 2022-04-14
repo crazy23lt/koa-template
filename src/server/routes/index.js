@@ -2,7 +2,7 @@ const Router = require("koa-router");
 const compose = require("koa-compose");
 const importDir = require("import-dir");
 const routerConfigs = [
-	{ folder: "user", prefix: "/auth" } /**user 业务相关路由 */
+	{ folder: "library", prefix: "" } /**user 业务相关路由 */
 ];
 module.exports = () => {
 	const composed = routerConfigs.reduce((prev, curr) => {
