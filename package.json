@@ -18,7 +18,9 @@
 	"description": "a normalized koa application.",
 	"scripts": {
 		"prepare": "husky install",
-		"commit": "cz"
+		"commit": "cz",
+		"start": "cross-env PORT=3000 NODE_ENV=development nodemon src/app.js",
+		"build": "pm2 start src/app.js --watch"
 	},
 	"config": {
 		"commitizen": {
@@ -29,12 +31,15 @@
 		"@babel/core": "^7.17.9",
 		"@babel/eslint-parser": "^7.17.0",
 		"commitizen": "^4.2.4",
+		"cross-env": "^7.0.3",
 		"cz-conventional-changelog-zh": "^0.0.2",
 		"eslint": "8.12.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.3.7",
+		"nodemon": "^2.0.15",
+		"pm2": "^5.2.0",
 		"prettier": "2.6.2"
 	},
 	"lint-staged": {
@@ -48,5 +53,11 @@
 		"node": ">=14.17.0",
 		"npm": ">=6.14.13",
 		"yarn": ">=1.22.18"
+	},
+	"dependencies": {
+		"import-dir": "^0.0.1",
+		"koa": "^2.13.4",
+		"koa-compose": "^4.1.0",
+		"koa-router": "^10.1.1"
 	}
 }
