@@ -18,20 +18,18 @@
 	"description": "a normalized koa application.",
 	"scripts": {
 		"prepare": "husky install",
-		"commitlint": "commitlint --config commitlint.config.js -e -V"
+		"commit": "cz"
 	},
 	"config": {
 		"commitizen": {
-			"path": "./node_modules/cz-customizable"
+			"path": "cz-conventional-changelog-zh"
 		}
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.9",
 		"@babel/eslint-parser": "^7.17.0",
-		"@commitlint/cli": "^16.2.3",
-		"@commitlint/config-conventional": "^16.2.1",
 		"commitizen": "^4.2.4",
-		"cz-customizable": "^6.3.0",
+		"cz-conventional-changelog-zh": "^0.0.2",
 		"eslint": "8.12.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
