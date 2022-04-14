@@ -12,11 +12,11 @@ module.exports = {
 		es2021: true
 	},
 	extends: [
-		"eslint:recommended" // eslint
-		// "plugin:prettier/recommended" // plugin-prettier
+		"eslint:recommended", // eslint
+		"plugin:prettier/recommended" // plugin-prettier
 	],
 
 	rules: {
-		// "prettier/prettier": "error"
+		"prettier/prettier": "error"
 	}
 };
