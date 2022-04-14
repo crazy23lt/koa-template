@@ -1,0 +1,54 @@
+{
+	"name": "koa-template",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"author": {
+		"name": "liut",
+		"email": "2394630102@qq.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [
+		"koa",
+		"mongo"
+	],
+	"description": "a normalized koa application.",
+	"scripts": {
+		"prepare": "husky install",
+		"commitlint": "commitlint --config commitlint.config.js -e -V"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-customizable"
+		}
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@babel/eslint-parser": "^7.17.0",
+		"@commitlint/cli": "^16.2.3",
+		"@commitlint/config-conventional": "^16.2.1",
+		"commitizen": "^4.2.4",
+		"cz-customizable": "^6.3.0",
+		"eslint": "8.12.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.7",
+		"prettier": "2.6.2"
+	},
+	"lint-staged": {
+		"*.js": [
+			"prettier --write",
+			"eslint --cache --fix",
+			"git add"
+		]
+	},
+	"engines": {
+		"node": ">=14.17.0",
+		"npm": ">=6.14.13",
+		"yarn": ">=1.22.18"
+	}
+}
