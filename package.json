@@ -20,8 +20,10 @@
 		"prepare": "husky install",
 		"commit": "cz",
 		"start": "cross-env PORT=3000 NODE_ENV=development nodemon --exec babel-node src/app.js",
-		"build": "./node_modules/.bin/babel src --out-dir lib",
-		"test": "./node_modules/.bin/mocha --harmony"
+		"build": "./node_modules/.bin/babel src --out-dir dist",
+		"test": "./node_modules/.bin/mocha --harmony",
+		"gulp": "./node_modules/.bin/gulp",
+		"tasklist": "./node_modules/.bin/gulp --tasks"
 	},
 	"config": {
 		"commitizen": {
@@ -37,10 +39,16 @@
 		"commitizen": "^4.2.4",
 		"cross-env": "^7.0.3",
 		"cz-conventional-changelog-zh": "^0.0.2",
+		"delete": "^1.1.0",
 		"eslint": "8.12.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-uglify": "^3.0.2",
 		"husky": "^7.0.4",
+		"koa-body": "^4.2.0",
+		"koa-logger": "^3.2.1",
+		"koa-static": "^5.0.0",
 		"lint-staged": "^12.3.7",
 		"mocha": "^9.2.2",
 		"nodemon": "^2.0.15",
@@ -62,6 +70,7 @@
 	},
 	"dependencies": {
 		"core-js": "3",
+		"gulp": "^4.0.2",
 		"import-dir": "^0.0.1",
 		"koa": "^2.13.4",
 		"koa-compose": "^4.1.0",
