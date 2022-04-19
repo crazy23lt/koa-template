@@ -1,3 +1,4 @@
+/** library 业务层 */
 module.exports = {
 	list: async ctx => {
 		ctx.status = 200;

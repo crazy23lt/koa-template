@@ -19,7 +19,7 @@ const notFound = async (ctx, next) => {
 module.exports = () =>
 	compose([
 		ignoreAssets(logger()),
-		staticserver(path.join(__dirname, "../../static")),
+		staticserver(path.join(__dirname, "../static")),
 		notFound,
 		koaBody({
 			jsonLimit: "1kb",
